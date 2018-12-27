@@ -1,4 +1,4 @@
-# eosBLACK Technical White Paper
+# eosBLACK Technical Whitepaper
 
 ## 01 Disclaimer
 
@@ -9,12 +9,12 @@
 
 본 백서에 기술된 내용은 현재 개발중이며 지속적으로 업데이트 되고 있습니다.
 
-eosBLACK이 완성될 경우, 본 백서에 명시된 네트워크와는 상당 수준 차이가 날 수 있습니다. EOSBLACK PTE. LTD. 모든 계획, 향후 예상이나 전망과 관련해 어떠한 보증도 하지 않으며, 본 문서의 어떠한 내용도 미래에 대한 약속이나 표시로 간주되지 않습니다.
+eosBLACK이 완성될 경우, 본 백서에 명시된 네트워크와는 상당 수준 차이가 날 수 있습니다. EOSBLACK PTE. LTD.는 모든 계획, 향후 예상이나 전망과 관련해 어떠한 보증도 하지 않으며, 본 문서의 어떠한 내용도 미래에 대한 약속이나 표시로 간주되지 않습니다.
 
 ## 02 Account
 
 
-OS Mainnet과 달리 BLACK Mainnet은 네트워크 사용자에게 계정 생성 비용을 부과하지 않습니다. 사용자는 다양한 DApp을 통해 신규 계정을 생성할 수 있으며, 계정 생성에 필요한 자원은 시스템을 통해 한시적으로 사용자 계정에 위임됩니다.
+EOS Mainnet과 달리 BLACK Mainnet은 네트워크 사용자에게 계정 생성 비용을 부과하지 않습니다. 사용자는 다양한 DApp을 통해 신규 계정을 생성할 수 있으며, 계정 생성에 필요한 자원은 시스템을 통해 한시적으로 사용자 계정에 위임됩니다.
 
 BLACK 토큰을 보유한 EOS Mainnet의 계정은 BLACK Mainnet에 그대로 승계되며 계정 유지에 필요한 최소 자원은 해당 계정이 보유한 BLACK 토큰으로 충당합니다. 
 
@@ -27,9 +27,7 @@ BLACK 토큰을 보유한 EOS Mainnet의 계정은 BLACK Mainnet에 그대로 �
 
 #### 2.1.1 Lending Staked Tokens with No fees
 
-EOSIO 네트워크 계정 생성 비용은 사용자 확보 측면에서 DApp 개발의 진입 장벽으로 평가됩니다. 일례로 계정당 생성 비용이 2,000 원일 때 100만 계정 생성 시 20억 원의 비용이 소요됩니다. eosBLACK은 계정 생성에 필요한 자원 뿐만 아니라 1400 Bytes의 RAM을 무료로 제공함으로써 
-
-사용자 부담을 극소화시킵니다.
+EOSIO 네트워크 계정 생성 비용은 사용자 확보 측면에서 DApp 개발의 진입 장벽으로 평가됩니다. 일례로 계정당 생성 비용이 2,000 원일 때 100만 계정 생성 시 20억 원의 비용이 소요됩니다. eosBLACK은 계정 생성에 필요한 자원 뿐만 아니라 1400 Bytes의 RAM을 무료로 제공함으로써 사용자 부담을 극소화시킵니다.
 
 신규 계정 생성 시 위임된 CPU와 NET Bandwidth는 30일간 무료로 제공되며, 이후 철회(Refund) 과정을 거쳐 시스템으로 회수됩니다. 이렇게 회수된 자원은 다시 신규 계정 생성에 활용됩니다.
 
@@ -78,7 +76,7 @@ eosBLACK 계정은 스테이크 수량을 기준으로 크게 토큰 홀더(Toke
 
 <strong><pre><p align="center">Token Holder < Minimum Stake  ≤ Stakeholder</p></pre></strong>
 
-스테이크홀더는 다시 참여자, 서포터, PO, 대표자로 구분됩니다. 참여자는 (대표자가 정한) 최소 토큰 을 스테이크한 구성원으로 투표권과 투표보상의 권리를 갖습니다.
+스테이크홀더는 다시 참여자, 서포터, PO, 대표자로 구분됩니다. 참여자는 (대표자가 정한) 최소 토큰을 스테이크한 구성원으로 투표권과 투표보상의 권리를 갖습니다.
 
 <p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/account4.png" width=80% height=80% /></p>
 <h5><p align="center">Figure3. User Classification</p></h5>
@@ -88,8 +86,7 @@ eosBLACK 계정은 스테이크 수량을 기준으로 크게 토큰 홀더(Toke
 
 ```
   PO : Project Owner의 약자로 주로 분산형 애플리케이션 개발자를 지칭함.
-  철회 기간(Refund Duration) : 철회 기간은 시스템에 락업된 자원을 철회할 때 계정으로 자원이 복구될 때까지 걸리는 시간을 
-                              뜻함
+  철회 기간(Refund Duration) : 철회 기간은 시스템에 락업된 자원을 철회할 때 계정으로 자원이 복구될 때까지 걸리는 시간을 뜻함
  ```
 
  <br>
@@ -97,7 +94,7 @@ eosBLACK 계정은 스테이크 수량을 기준으로 크게 토큰 홀더(Toke
 <h5><p align="center">Table. 계정 유형에 따른 최소 스테이크 수량 및 철회기간 예</p></h5>
 <p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/account5.png" width=70% height=70% /></p>
 <h6><p align="center">* 최소 스테이크 수량 및 철회 기간은 대표자 합의에 의해 최적값으로 변경될 수 있음.</p></h6>
-<h6><p align="center">* Lock-in Period에 Vesting Option 구현</p></h6>
+<h6><p align="center">* Lock-in Period 에 Vesting Option 구현</p></h6>
 
 <br>
 
