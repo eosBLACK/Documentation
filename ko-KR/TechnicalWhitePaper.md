@@ -89,7 +89,7 @@ eosBLACK 계정은 스테이크 수량을 기준으로 크게 토큰 홀더(Toke
   철회 기간(Refund Duration) : 철회 기간은 시스템에 락업된 자원을 철회할 때 계정으로 자원이 복구될 때까지 걸리는 시간을 뜻함
  ```
 
- <br>
+<br>
 
 <h5><p align="center">Table. 계정 유형에 따른 최소 스테이크 수량 및 철회기간 예</p></h5>
 <p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/account5.png" width=70% height=70% /></p>
@@ -111,6 +111,7 @@ eosBLACK 계정은 스테이크 수량을 기준으로 크게 토큰 홀더(Toke
 <br>
 <br>
 <br>
+
 ## 03 Resources
 
 ### 3.1 RAM 투기 제한 방안 : Limiting Active RAM Usage
@@ -123,7 +124,7 @@ eosBLACK 시스템은 RAM 무단점유(RAM Squatting)에 따른 비정상적인 
 EOS Mainnet은 RAM 가격 안정을 도모하기 위해 1 블록당 1KB의 RAM을 추가로 공급하겠다고 밝힌 바 있지만 실제 네트워크 상의 RAM 수요와 상관 없이 일률적으로 RAM 자원을 늘린다는 점에서 비효율적 방안으로 보입니다.
 <br>
 <strong><pre><p align="center">[1 kbyte/block] x [2 block/sec] x [60 sec/min] x [60 min/hr] x [24hr/day] = 172,800 kbyte</p></pre></strong>
-
+<br>
 ### 3.2 CPU 가격 안정: ① 스테이킹 사용 이원화
 
 eosBLACK은 자원 활용의 효율성을 높이기 위해 CPU와 NET Bandwidth 자원 사용을 위한 스테이킹과 투표를 위한 스테이킹을 분리시키고자 합니다. 실제 상당량의 자원이 투표에 사용되지만 네트워크 자원으로는 활용되고 있지 않습니다. EOS Mainnet과 달리 eosBLACK은 투표에 따른 인센티브를 제공하기 때문에 자원 할당과 무관하게 투표에 자발적으로 참여하는 토큰 홀더들이 많을 것으로 봅니다. 
