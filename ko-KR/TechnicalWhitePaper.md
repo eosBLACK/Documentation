@@ -35,7 +35,7 @@ EOSIO 네트워크 계정 생성 비용은 사용자 확보 측면에서 DApp �
 
 
 <p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/account1.png" width=80% height=80% /></p>
-<h5><p align="center">Figure1. Leasing Bandwidth Resources for Creating Account</p></h5>
+<h5><p align="center">Figure 1. Leasing Bandwidth Resources for Creating Account</p></h5>
 
 <br>신규 사용자에게 제공되는 컴퓨팅 자원은 다음과 같습니다.
 
@@ -56,7 +56,7 @@ EOSIO 네트워크 계정 생성 비용은 사용자 확보 측면에서 DApp �
 
 사용자는 가입일 기준 30일 동안 추가 자원 투입없이 계정을 유지할 수 있습니다. 만약 이 기간 동안 추가 스테이크를 하지 않으면 계정 사용이 중지됩니다.
 <p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/account3.png" width=80% height=80% /></p>
-<h5><p align="center">Figure2. Refund Process</p></h5>
+<h5><p align="center">Figure 2. Refund Process</p></h5>
 <br>
 
 #### 2.1.3 악의적 계정 생성에 대한 해결 방안
@@ -79,7 +79,7 @@ eosBLACK 계정은 스테이크 수량을 기준으로 크게 토큰 홀더(Toke
 스테이크홀더는 다시 참여자, 서포터, PO, 대표자로 구분됩니다. 참여자는 (대표자가 정한) 최소 토큰을 스테이크한 구성원으로 투표권과 투표보상의 권리를 갖습니다.
 
 <p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/account4.png" width=80% height=80% /></p>
-<h5><p align="center">Figure3. User Classification</p></h5>
+<h5><p align="center">Figure 3. User Classification</p></h5>
 <br>
 
 서포터, Project Owner, 대표자 후보는 시스템 등록을 통해 해당 자격을 얻을 수 있습니다.  eosBLACK은 네트워크 구성원의 신뢰도를 높이기 위해 담보(collateral) 개념의 스테이킹 기간을 요구하며 권한이 늘어날수록 최소 스테이크 수량과 철회 기간(Refund Duration)은 늘어납니다.
@@ -104,10 +104,30 @@ eosBLACK 계정은 스테이크 수량을 기준으로 크게 토큰 홀더(Toke
 
 
 <p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/account6.png" width=80% height=70% /></p>
-<h5><p align="center">Figure4. Representative's Proposal Approval Procedure</p></h5>
+<h5><p align="center">Figure 4. Representative's Proposal Approval Procedure</p></h5>
 
 <br>
 <pre>대표자가 의결권을 행사하지 않을 경우 패널티 점수가 올라가며, 동일한 이벤트가 3회 연속 발생할 경우 7일간 동안 블록 생산에서<br>제외됩니다.</pre>
 <br>
 <br>
 <br>
+## 03 Resources
+
+### 3.1 RAM 투기 제한 방안 : Limiting Active RAM Usage
+
+eosBLACK 시스템은 RAM 무단점유(RAM Squatting)에 따른 비정상적인 RAM 가격 상승을 막기 위해 Active RAM을 자동 회수합니다. 이때 RAM 철회 비용은 구매 시점의 가격을 기준으로 하며, 비정상적 RAM 구매에 따른 패널티 적용으로 1%의 거래 수수료가 부과됩니다. Active RAM의 회수량은 미사용 RAM 기준 90%이며, 트리거는 buyram/buyrambytes action과 그 액션으로 획득한 RAM의 50% 이하 사용률입니다.  
+
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/resources1.PNG" width=80% height=70% /></p>
+<h5><p align="center">Figure 5. Solving RAM Speculation in BLACK</p></h5>
+
+EOS Mainnet은 RAM 가격 안정을 도모하기 위해 1 블록당 1KB의 RAM을 추가로 공급하겠다고 밝힌 바 있지만 실제 네트워크 상의 RAM 수요와 상관 없이 일률적으로 RAM 자원을 늘린다는 점에서 비효율적 방안으로 보입니다.
+<br>
+<strong><pre><p align="center">[1 kbyte/block] x [2 block/sec] x [60 sec/min] x [60 min/hr] x [24hr/day] = 172,800 kbyte</p></pre></strong>
+
+### 3.2 CPU 가격 안정: ① 스테이킹 사용 이원화
+
+eosBLACK은 자원 활용의 효율성을 높이기 위해 CPU와 NET Bandwidth 자원 사용을 위한 스테이킹과 투표를 위한 스테이킹을 분리시키고자 합니다. 실제 상당량의 자원이 투표에 사용되지만 네트워크 자원으로는 활용되고 있지 않습니다. EOS Mainnet과 달리 eosBLACK은 투표에 따른 인센티브를 제공하기 때문에 자원 할당과 무관하게 투표에 자발적으로 참여하는 토큰 홀더들이 많을 것으로 봅니다. 
+
+### 3.3 CPU 가격 안정: ② 커뮤니티를 통한 선별적 DApp 수용
+
+pokereosgame-resolvebet, betdiceadmin-reveal2 등의 Contract으로 인한 Inline Action이 기하급수적으로 증가하면서 CPU 자원 가격과 가용성이 문제화되고 있습니다. Daniel Larimer는 애플리케이션 수준에서의 코드 최적화로 불필요한 CPU 소비를 줄일 수 있다고 미디엄을 통해 밝힌 바 있지만 개별 네트워크 참여자에게 코드 최적화를 강제할 만한 수단이 없기 때문에 사실상 문제 해결 방법으로 보이지 않습니다. 또한 DApp 홍보하기 위해 악의적으로 대량 트랜잭션을 발생시키는 자전거래의 정황이 포착되기도 했습니다. eosBLACK은 커뮤니티 구성원을 통해 체인 위에서 구동할 DApp을 선정하기 때문에 무의미한 트랜잭션을 유발하는 DApp을 원천적으로 차단할 수 있고, 이로 인한 CPU 가격 상승을 예방할 수 있습니다.
