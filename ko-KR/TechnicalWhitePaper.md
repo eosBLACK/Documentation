@@ -129,3 +129,71 @@ EOS Mainnet은 RAM 가격 안정을 도모하기 위해 1 블록당 1KB의 RAM�
 
 ><b id="f5"><sup>5</sup></b> 미사용 RAM[↩](#a5)<br>
 <b id="f6"><sup>6</sup></b> 무제한적 RAM 공급 모델[↩](#a6)<br>
+
+<br>
+<br>
+
+***
+
+## 04 Voting
+
+### 4.1 대표자 투표: Stake-Weighted Approval Votes
+&nbsp;&nbsp;&nbsp;&nbsp;스테이크홀더는 각자가 보유한 BLACK 수량에 비례하여 보팅 파워(Voting Power)<sup id="a8">[8](#f8)</sup>을 행사할 수 있습니다. EOS Mainnet과 동일하게 계정당 최대 30번 투표를 할 수 있고, 철회 역시 가능합니다. BLACK Mainnet에서 보팅 파워는 EOS Mainnet과 크게는 유사하나 Contribute Time<sup id="a9">[9](#f9)</sup>과 투표 계정수에 따른 보팅 파워 균등 분할 원칙이 적용됩니다.
+
+#### 4.1.1 보팅 파워(Voting Power) 계산
+##### 4.1.1.1 Contribute Time
+&nbsp;&nbsp;&nbsp;&nbsp;eosBLACK은 네트워크 충성도를 보팅 파워에 반영하고자 스테이크 유지 기간(Contribute Time)을 보팅 파워 산출 시 다음과 같이 반영합니다.
+
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/voting1.PNG" width=80% height=80% /></p>
+<br>
+
+보팅 파워는 보팅 파워로 전환되지 않은 스테이크를 기준으로 매일 10%<sup id="a10">[10](#f10)</sup>씩 증가합니다. 예를 들어, 1,000 BLACK을 20일 간 스테이크한 계정은 5,000 BLACK을 하루 동안 스테이크한 계정보다 보팅 파워가 2배 가량 높습니다.
+
+<br>
+
+<h5><p align="center">Table 3. 스테이크 수량과 기간에 따른 해당 일자의 Voting Power 비교</p></h5>
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/voting2.PNG" width=70% height=70% /></p>
+
+<br>
+
+일 단위로 계산된 보팅 파워는 시간이 지남에 따라 누적 합산되며 그 내용은 다음과 같습니다.
+
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/voting3.PNG" width=80% height=80% /></p>
+<h5><p align="center">Figure 6. Voting Power(10% Upgraded from Staked Tokens per Day)</p></h5><br>
+
+##### 4.1.1.2 투표 계정 수에 따른 보팅 파워 균등 분할
+
+&nbsp;&nbsp;&nbsp;&nbsp;eosBLACK은 다수의 BLACK을 보유한 계정이 일부 대표자를 지지함으로써 발생할 수 있는 네트워크의 무결성을 높이고 담합 가능성을 줄이기 위해 보팅 파워 산출 시 투표 계정 수에 따라 보팅 파워를 균등 분할 원칙을 적용합니다. 그 계산은 다음과 같습니다.
+
+<br>
+
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/voting4.PNG" width=80% height=80% /></p>
+
+<br>
+
+### 4.2 프로젝트 선정 투표(Voting Projects of This Phase)
+&nbsp;&nbsp;&nbsp;&nbsp;eosBLACK은 기초 자금과 인플레이션 등을 통해 마련한 예산을 바탕으로 (eosBLACK 생태계를 이끌) 전도유망한 DApp 개발 프로젝트를 지원합니다. 우리는 더 많은 구성원의 의견을 반영하고 특정 프로젝트에 특혜가 쏠리는 것을 막기 위해 다음과 같은 방법을 적용합니다.
+
+#### 4.2.1 프로젝트 투표: 혼합 증명(Proof of Mixed)
+&nbsp;&nbsp;&nbsp;&nbsp;eosBLACK은 프로젝트 선정 과정에 혼합 증명을 사용함으로써 DPoS가 갖는 현실적 한계, 즉 소수에 의한 담합, 부당 공동행위 등을 제거합니다. 여기서 말하는 혼합 증명이란 의사결정 과정에 PoA(Proof of Approval)와 PoS(Proof of Stake)를 순차적으로 반영함을 뜻합니다. 
+
+제안 풀(Proposal Pool)에 등록된 프로젝트는 일정 기간 스테이크홀더의 지지(Approval)를 얻어 대표자 투표에 회부됩니다. 이때 리스팅되는 프로젝트는 전체 투표(Public Voting) 지지 결과를 바탕으로 예산 범위 내에서 선정이 됩니다.  
+
+대표자는 지정 기간 내에 프로젝트 선정 투표에 참여해야 하며, 기한 내에 의결정족수가 확보되지 않으며 차순위 예비 대표자에게 투표권이 주어집니다. 
+
+투표 효력은 ⅔+1 이상 찬성(⅔ Supermajority) 시 발생하며 선정된 프로젝트는 각각의 로드맵에 따라 인적/물적 지원을 받게 됩니다.
+
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/voting5.PNG" width=80% height=80% /></p>
+<h5><p align="center">Figure 7. Project Voting</p></h5><br>
+
+#### 4.2.2 Score(aka Range) Voting
+&nbsp;&nbsp;&nbsp;&nbsp;전체 투표 시 Approval voting의 찬성표를 집계하는 것에만 그치지 않고 프로젝트에 점수를 부여하는 방식으로 프로젝트에 대한 구성원들의 가치 척도(Measure of Value)를 보다 세분화하고자 합니다. 프리젠테이션 기간 중 집계되는 점수(Score)는 프로젝트 노출 순서에 영향을 줄 수 있습니다. 프리젠테이션 기간이 종료되면 PoA 기준으로 프로젝트를 선발하고, 동점이 나올 경우 점수를 활용합니다. 이 점수는 대표자 투표 시 의사결정의 지표로 사용될 수 있습니다. 만약 찬성표와 점수가 동일한 경우가 발생할 경우에는 비용 대비 성과 관점에서 더 낮은 예산의 프로젝트를 선정합니다.
+
+<h5><p align="center">Table 4. Aka Range Voting</p></h5>
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/voting6.PNG" width=70% height=70% /></p>
+
+<br>
+
+><b id="f8"><sup>8</sup></b> 보팅 파워는 계정이 보유한 Staked Token의 양과 비례함. [↩](#a8)<br>
+<b id="f9"><sup>9</sup></b> 계정을 유지한 총 기간을 뜻하며 ‘사용자 충성도(User Loyalty)’로 간주함. [↩](#a9)<br>
+<b id="f10"><sup>10</sup></b> 10%의 수치는 대표자 합의에 따라 달라질 수 있음. [↩](#a10)<br>
