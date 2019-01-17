@@ -242,7 +242,7 @@ EOS Mainnet은 RAM 가격 안정을 도모하기 위해 1 블록당 1KB의 RAM�
 &nbsp;&nbsp;&nbsp;&nbsp;BLACK 토큰 홀더라면 누구나 스테이킹과 등록을 통해서 서포터 지위를 획득할 수 있습니다.
 서포터 등록이 완료되면 자동으로 서포터 풀(Supporter’s Pool)에 등록됩니다.
 
-서포터는 크립토 팩토리에서 개발되는 DApp 프로젝트에 참여할 수 있으며, 그에 대한 보상을 받았습니다. 이는 EOS Mainnet의 Work Proposal과 유사하며 서포터는 지속적 프로젝트 참여와 평판 관리를 통해 더 높은 보상을 획득할 수 있습니다. 이들의 참여는 스마트 컨트랙트에 의해 관리되고 그에 따른 보상이 집행됩니다.
+서포터는 크립토 팩토리에서 개발되는 DApp 프로젝트에 참여할 수 있으며, 그에 대한 보상을 받습니다. 이는 EOS Mainnet의 Work Proposal과 유사하며 서포터는 지속적 프로젝트 참여와 평판 관리를 통해 더 높은 보상을 획득할 수 있습니다. 이들의 참여는 스마트 컨트랙트에 의해 관리되고 그에 따른 보상이 집행됩니다.
 
 <p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/entities2.PNG" width=80% height=80% /></p>
 <h5><p align="center">Figure 9. Supporter’s Role</p></h5><br>
