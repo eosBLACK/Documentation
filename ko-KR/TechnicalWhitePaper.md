@@ -197,3 +197,85 @@ EOS Mainnet은 RAM 가격 안정을 도모하기 위해 1 블록당 1KB의 RAM�
 ><b id="f8"><sup>8</sup></b> 보팅 파워는 계정이 보유한 Staked Token의 양과 비례함. [↩](#a8)<br>
 <b id="f9"><sup>9</sup></b> 계정을 유지한 총 기간을 뜻하며 ‘사용자 충성도(User Loyalty)’로 간주함. [↩](#a9)<br>
 <b id="f10"><sup>10</sup></b> 10%의 수치는 대표자 합의에 따라 달라질 수 있음. [↩](#a10)<br>
+
+<br>
+<br>
+
+***
+
+## 05 Entities
+### 5.1 대표자(Representative)
+
+&nbsp;&nbsp;&nbsp;&nbsp;전체 투표(Public Voting: Stake-Weighted Approval Votes) 결과 상위 21위에 오른 대표자는 매 라운드마다 ⅔+1의 합의 알고리즘(Consensus Algorithm)을 사용하여 새로운 블록을 생성합니다. 대표자는 모든 네트워크 매개 변수를 수정할 수 있는 권한을 가집니다.
+
+대표자는 21명의 활성 대표자(Producing Nodes)와 30명의 예비 대표자(Non-producing Nodes)로 구성됩니다. 블록의 유효성 검사를 하는 노드가 21개 뿐이라는 EOS 네트워크상의 설계 결함을 보완하기 위해 대표자 합의를 통해 대표 노드(Master Node, Producing Node)를 최대 51개까지 늘릴 수 있습니다.
+
+블록 생산에 참여하는 대표자는 각 라운드마다 Round-robin Scheduling 방식<sup id="a11">[11](#f11)</sup>으로 선정됩니다.
+
+대표자 후보(Candidates)가 되려면 정해진 수량 만큼 BLACK을 스테이킹해야 하며, 이 과정에서 투표  시스템에 락업된 BLACK은 철회 요청 시 일정 기간 동안 시스템에 묶인 뒤 환불 처리됩니다.
+
+#### 5.1.1 DPoS(Delegated Proof-of-Stake) + BFT(Byzantine Fault Tolerance)
+
+&nbsp;&nbsp;&nbsp;&nbsp;POW (Proof Of Work) 및 POS (Proof Of Stake) 합의 메커니즘은 높은 수준의 트랜잭션 요구를 빠르게 처리할 수 없습니다. DPOS + BFT 합의 메커니즘은 사용자 경험과 분산 시스템 모두를 충족시키는 솔루션으로 이미 Steem과 Bitshares를 통해 검증된 바 있습니다.  이 메커니즘을 사용하면 사이드체인 혹은 샤딩 처리 매커니즘 없이도 초당 수천 건의 트랜잭션을 처리할 수 있습니다.
+
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/entities1.PNG" width=80% height=80% /></p>
+<h5><p align="center">Figure 8. Block Producer</p></h5><br>
+
+#### 5.1.2 Hardware Requirements
+
+-  최소 8 코어 CPU
+-  최소 32 GB RAM
+-  100Mbps의 인터넷 연결 속도를 제공하는 고정 IP
+-  SSD Storage
+
+#### 5.1.3 자격 상실
+
+&nbsp;&nbsp;&nbsp;&nbsp;대표자는 다음의 사항으로 인해 그 자격을 잃을 수 있습니다.
+
+-  참여자 지지 철회: 참여자는 자신의 투표를 철회하여 다른 후보 또는 대표자에게 투표를 행사할 수 있습니다. 
+-  대표자 해임 투표 통과:  대표자가 생태계 유지에 심각한 피해를 입혔다고 판단될 경우 대표자들은 해당 대표자의 해임을 투표로 결정할 수 있습니다. 해당 대표자를 제외, 예비 대표자 포함 대표자 투표에서 ⅔+1 이상의 해임 찬성이 있을 경우
+-  최소 스테이킹 수량 조건 미충족: 대표자는 최소 N개<sup id="a12">[12](#f12)</sup> 이상의 스테이킹 수량을 임기 기간 중 항상 유지해야 합니다. 최소 스테이킹 수량 미만으로 떨어질 경우 대표자 자격을 상실합니다.
+
+### 5.2 서포터(Supporter: Co-worker)
+#### 5.2.1 자격
+
+&nbsp;&nbsp;&nbsp;&nbsp;BLACK 토큰 홀더라면 누구나 스테이킹과 등록을 통해서 서포터 지위를 획득할 수 있습니다.
+서포터 등록이 완료되면 자동으로 서포터 풀(Supporter’s Pool)에 등록됩니다.
+
+서포터는 크립토 팩토리에서 개발되는 DApp 프로젝트에 참여할 수 있으며, 그에 대한 보상을 받았습니다. 이는 EOS Mainnet의 Work Proposal과 유사하며 서포터는 지속적 프로젝트 참여와 평판 관리를 통해 더 높은 보상을 획득할 수 있습니다. 이들의 참여는 스마트 컨트랙트에 의해 관리되고 그에 따른 보상이 집행됩니다.
+
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/entities2.PNG" width=80% height=80% /></p>
+<h5><p align="center">Figure 9. Supporter’s Role</p></h5><br>
+
+토큰 홀더는 서포터 등록 시 다음 사항을 등록해야 합니다.
+
+<br>
+
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/entities3.PNG" width=80% height=80% /></p>
+
+<br>
+
+### 5.3 Advisory Board
+#### 5.3.1 Advisory Board 구성
+
+&nbsp;&nbsp;&nbsp;&nbsp;Advisory Board(이하 고문)의 구성원은 전체 투표를 통해 선출되며, 업무의 연속성을 보장하기 위해 심각한 도덕적 해이를 일으키지 않는 한 1년간의 임기를 보장 받습니다. 
+
+- 연임 가능
+- 후보 출마 시 일정 수량의 BLACK이 청구될 수 있음.
+
+임기 내에 일부 고문이 신의성실의 원칙을 다하지 않아 대표자 투표에 의해 그 자격을 잃게 되면 당해년도 고문 투표 지지율을 바탕으로 새 고문 후보를 선임합니다. 만약 그 후보가 고문 제안을 받아들이면, 잔여 임기 동안 고문으로서 활동하게 됩니다.
+
+고문 투표는 매 라운드마다 계상되는 대표자 투와 달리 당해년도 투표가 만료된 시점부터는 투표 철회가 불가능합니다.
+
+<pre>고문 활동에 대한 보상은 서포터 보상의 일종으로 대표자에 의해 그 수량이 결정됩니다.</pre>
+
+#### 5.3.2 고문의 주요 역할
+
+- 프로젝트 예산 결정
+- 프로젝트 제안 심의
+- 비즈니스 파라미터 제안
+
+<br>
+
+><b id="f11"><sup>11</sup></b> 모든 순서가 차례대로 지속되고, 마지막 순서가 끝나면 다시 첫 번째 것이 기회를 얻는 방식. [↩](#a11)<br>
+<b id="f12"><sup>12</sup></b> 기본 수량은 대표자 합의에 따라 변경될 수 있으나 기본 수량은 “Table 2. 계정 유형에 따른 최소 스테이크 수량 및 철회 기간”을 기준으로 함. [↩](#a12)<br>
