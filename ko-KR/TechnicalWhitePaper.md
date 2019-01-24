@@ -279,3 +279,80 @@ EOS Mainnet은 RAM 가격 안정을 도모하기 위해 1 블록당 1KB의 RAM�
 
 ><b id="f11"><sup>11</sup></b> 모든 순서가 차례대로 지속되고, 마지막 순서가 끝나면 다시 첫 번째 것이 기회를 얻는 방식. [↩](#a11)<br>
 <b id="f12"><sup>12</sup></b> 기본 수량은 대표자 합의에 따라 변경될 수 있으나 기본 수량은 “Table 2. 계정 유형에 따른 최소 스테이크 수량 및 철회 기간”을 기준으로 함. [↩](#a12)<br>
+
+<br>
+<br>
+
+***
+## 06 Incentives
+
+&nbsp;&nbsp;&nbsp;&nbsp;eosBLACK은 생태계의 가치 및 활용성을 확대하기 위해 새로운 아이디어 및 프로젝트들을 지원하며, 생태계 구성원들이 그 혁신의 과정에 직접 참여할 수 있도록 인센티브를 지급합니다. 인센티브는 크게 
+
+-  네크워크 노드 유지를 위한 블록생산 보상, 
+-  네트워크 성장을 위한 서포터 활동 보상, 
+-  탈중앙화의 가치를 제고할 수 있는 투표 보상
+
+으로 구성됩니다.
+
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/incentives1.PNG" width=80% height=80% /></p>
+<h5><p align="center">Figure 10. Incentives</p></h5><br>
+
+### 6.1 Block Producer Rewards
+#### 6.1.1 가중 라운드 로빈(Weighted Round Robin: WRR) 방식
+
+&nbsp;&nbsp;&nbsp;&nbsp;Round-robin 로드 밸런싱은 클라이언트 요청을 서버 그룹 전체에 ‘차례로’ 할당하는 방법이라면 Weighted Round Robin 로드 밸런싱은 ‘특정 기준(가중치)’에 따라 클라이언트 요청을 각 대표 노드에 할당하는 방법입니다. 
+
+'가중치'라는 속성을 사용하여 블록생선 요청이 가중치에 비례하여 노드에 할당되는 방법을 통해 대표자 간 블록생성 보상을 조절하여 대표자들이 보다 책임감 있게 노드를 유지하고 관리할 수 있게 유도하고자 합니다.
+
+예를 들어 클러스터에 두 개의 노드가 있고 관리자가 노드A에 가중치 100을, 노드B에 가중치 400을 할당했다고 가정하면 100개의 요청 중 20개는 노드 A로 가고 80개는 노드 B로 가게 됩니다. 가중 라운드 로빈 방식은 패널티 받은 노드에 적용함으로써 사전에 발생 가능한 문제를 차단하는 기제로 사용될 수 있습니다.
+
+### 6.2 Supporter Ranking Rewards
+
+&nbsp;&nbsp;&nbsp;&nbsp;eosBLACK은 커뮤니티의 성장을 견인하는 서포터들의 인센티브 지급을 위해 다음과 같은 기준을 사용합니다.
+
+#### 6.2.1 활동 보상
+
+&nbsp;&nbsp;&nbsp;&nbsp;서포터는 신규  팔로워 수, 글 추천 수 등을 바탕으로 점수를 얻게 됩니다. 이 점수(50%)는 서포터 랭킹 시스템의 지지율(50%)과 합산되어 인센티브 할당의 기준이 됩니다. 보상은 주 단위로 산정되며, 지급 기준 또한 주 단위로 할당됩니다. 보상은 클레임 요청 시 지급됩니다.
+
+
+<br>
+
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/incentives2.PNG" width=80% height=80% /></p>
+
+<br>
+
+#### 6.2.2 지지율 보상
+
+&nbsp;&nbsp;&nbsp;&nbsp;서포터 랭킹 보상은 투표율(Votes Proportion)을 근거로 계산되며, 그 산식은 다음과 같습니다.
+
+<strong><pre><p align="center">서포터 보상 = 총 주 보상 × (last_supporter_vote_weight ÷ 전체 last_vote_weight)</p></pre></strong>
+
+1%의 임계치(Qualifying Threshold)가 존재하며 그 이하는 보상 대상에서 제외됩니다. 투표율 산정 방식은 대표자 투표와 동일하며 계정당 최대 10개의 계정에 투표할 수 있습니다.
+
+### 6.3 기여 기반 Airdrop : 투표 보상(Voting Rewards)
+
+&nbsp;&nbsp;&nbsp;&nbsp;투표 보상은 계정당 스테이크 자원(Staked Coins)을 기준으로 할당되며, 그 산식은 다음과 같습니다.
+
+<strong><pre><p align="center">투표 보상 = 총 에어드랍 수량 × (last_vote_weight ÷ 전체 last_vote_weight)</p></pre></strong>
+
+투표 보상에서 투표는 대표자 투표와 프로젝트 투표를 말하며, 에어드랍을 받기 위해서는 두 가지 유형의 투표에 모두 참여해야 합니다. 
+
+PO는 프로젝트 토큰 할당 계획에 따라 에어드랍을 실시해야 하며, 이중 80%는 전체 투표자를 대상으로 지급되고, 나머지 20%는 해당 프로젝트에 투표한 구성원에게 지분율에 따라 지급됩니다.
+
+<br>
+
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/incentives3.PNG" width=80% height=80% /></p>
+<h5><p align="center">Figure 11. Voting Rewards</p></h5><br>
+
+<br>
+
+#### 6.3.1 DApp 토큰 지급 방법: Skyhook
+
+&nbsp;&nbsp;&nbsp;&nbsp;크립토 팩토리(Crypto Factory)에서 발행된 토큰은 스카이훅(Skyhook) 방식으로 지급되며, 기한 내에 사용자로부터 지급 요청(Claim)이 없을 경우 기 지급된 토큰은 에어그랩(Airgrab)과 달리 전량 회수됩니다. 또한 사용자(Receiver)들은 새로운 토큰 정보를 저장하기 위해 소량의 RAM 자원(약 240 bytes)을 제공해야 합니다.
+
+<br>
+
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/incentives4.PNG" width=80% height=80% /></p>
+<h5><p align="center">Figure 12. Airdrop: Skyhook</p></h5><br>
+
+<br>
