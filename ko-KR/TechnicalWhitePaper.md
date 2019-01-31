@@ -356,3 +356,87 @@ PO는 프로젝트 토큰 할당 계획에 따라 에어드랍을 실시해야 �
 <h5><p align="center">Figure 12. Airdrop: Skyhook</p></h5><br>
 
 <br>
+<br>
+
+***
+
+## 07 Project
+
+&nbsp;&nbsp;&nbsp;&nbsp;eosBLACK의 프로젝트 지원은 커뮤니티의 투표 과정을 통해 결정되기 때문에 Community-driven Project라 볼 수 있습니다. ‘온체인 거버넌스(On-chain Governance)’를 통해 최종 선발된 프로젝트는 개발에 필요한 자금을 지원받습니다. 각 라운드(Phase) 당 할당된 예산의 범위에 따라 프로젝트 선정 개수 또한 달라지기 때문에 PO(Project Owner)는 더 높은 지지율을 획득하기 위해 BM(Business Model) 설계와 제안서의 완성도를 높여야 합니다.
+
+&nbsp;&nbsp;&nbsp;&nbsp;eosBLACK은 프로젝트 등록 남발을 막기 위해 소정의 프로젝트 등록 비용(Anti-spam fee)을 요구할 수 있습니다.
+
+&nbsp;&nbsp;&nbsp;&nbsp;PO는 프로젝트 등록 시 다음과 같은 기초 정보를 시스템에 등록해야 합니다.
+
+<br>
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/project1.PNG" width=80% height=80% /></p>
+<br>
+
+### 7.1 Proposal Presentation
+
+&nbsp;&nbsp;&nbsp;&nbsp;프로젝트는 다음과 같은 투표 과정을 선정됩니다.
+
+<br>
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/project2.PNG" width=80% height=80% /></p>
+<h5><p align="center">Figure 13. Proposal Presentation</p></h5><br>
+<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;프로젝트 제안서는 암호화 과정을 거쳐 블록체인에 저장되며 중앙화된 협의체에 의해 검토, 검열되지 않습니다. 프리젠테이션 기간은 1주이며, 이 기간 동안 국민투표(Referendum)가 실시됩니다. 프로젝트 제안서를 최종 제출하지 않았다면 PO는 국민투표 개시 전까지 제안서를 업데이트 할 수 있습니다. 본 기간이 종료되면 스마트 컨트랙트에 의해 자동으로 투표 결과가 공개됩니다. 대표자 투표를 진행하기에 앞서 전문가 집단이 프로젝트 선발 후보를 면밀히 검증하고 대표자들의 의사 결정에 필요한 자료를 제공합니다. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;국민투표의 경우 전체 구성원의 15% 이상이 참여해야 그 결과가 발동되며, 대표자 투표로 제안서가 최종 승인되면 PO는 로드맵에 따라 개발 작업하게 됩니다. PO는 프로젝트 예산을 지원받음에 따라 기한 내에 로드맵에 따른 산출물을 제출해야 하며, 각 Sub-project 단위로 개발에 투입되는 비용을 청구할 수 있습니다. 예산 집행 여부와 관련된 합의는 대표자 투표를 통해 이루어집니다.
+
+<br>
+
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/project3.PNG" width=80% height=80% /></p>
+<h5><p align="center">Figure 14. Examples of Proposal Presentation</p></h5><br>
+
+<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;프로젝트 제안서 노출 순서와 관련한 중앙화 이슈를 최대한 배제하기 위해 좋아요/싫어요(Up/down votes)를 정보를 Ordering에 반영할 예정입니다. 이 정보는 투표 결과에 계상되지 않습니다.
+
+&nbsp;&nbsp;&nbsp;&nbsp;낮은 지지를 받아 선정에서 제외된 제안서라 하더라도 PO의 결정에 따라 이후 라운드에서 다시 경합을 벌일 수 있습니다.
+
+### 7.1.1 투표 현황 공개 방식
+
+&nbsp;&nbsp;&nbsp;&nbsp;투표가 끝나기 전 득표 현황이 네트워크에 실시간으로 공개되는 것은 이미 상대적으로 높은 지지율을 얻은 제안서에 투표가 몰리는 상황을 연출할 수 있습니다. 이는 다수가 선택할만한 곳에 투표를 한다는 ‘케인즈의 미인대회 이론(Keynesian beauty contest)’을 연상시킵니다. PLCR(Partial Lock Commit/Reveal) 투표 방식<sup id="a13">[13](#f13)</sup>을 활용하면 투표 기간 동안 득표 상황이 체인에 공개되지 않게 함으로써 불특정 다수의 투표가 인센티브에 의해 무의미한 방향으로 쏠리는 것을 막을 수 있습니다.
+
+## 7.2 Proposal Presentation Ordering
+
+&nbsp;&nbsp;&nbsp;&nbsp;Score Voting을 통해 획득한 점수와 좋아요/싫어요(Up/down votes)가 프로젝트 제안서의 노출 순서에 영향을 미칠 수 있다고 앞서 언급한 바 있습니다. 제안서의 전시 순서는 지지율의 결과를 좌우할 만큼 큰 영향을 미치는 요소 중 하나입니다. 그렇기 때문에 Human Curated가 아닌 알고리즘에 의해 전시되어야 합니다.
+
+## 7.3 규모에 따른 프로젝트 분류
+
+&nbsp;&nbsp;&nbsp;&nbsp;프로젝트는 예산 범위에 따라 다음과 같은 기준으로 분류됩니다.
+
+<br>
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/project4.PNG" width=80% height=80% /></p>
+<br>
+
+## 7.4 프로젝트 진행에 따른 보상의 유형
+
+&nbsp;&nbsp;&nbsp;&nbsp;프로젝트 진행에 따른 구성원 보상(Airdrop)은 다음의 기준에 따라 그 유형이 나뉩니다.
+
+<br>
+<p align="center"><img align="center" src="https://github.com/eosBLACK/Documentation/blob/master/images/project5.PNG" width=80% height=80% /></p>
+<br>
+
+## 7.5 지적 재산권 보호: Code Privacy
+
+&nbsp;&nbsp;&nbsp;&nbsp;PO는 네트워크에 배치된 스마트 계약에 대한 지적 재산권에 대한 권리를 보유할 수 있습니다.
+
+
+## 7.6 Application Requirement of eosBLACK: Mature & Budding
+
+PO는 프로젝트 등록 시 충분한 개발 계획과 자금 집행 계획을 세워야 하며, 프로젝트 선정 이후에는 정기/비정기적 보고를 통해 프로젝트 진척사항을 참여자들에게 알려야 합니다.
+- 제출된 문서는 완전하고 정확해야 합니다.
+- 정책 위험 없이 전문성 및 규정 준수 요건을 충족해야 합니다.
+- 프로젝트는 실제 기술 지원이 가능해야 하며 실용적인 응용 프로그램을 목표로 해야 합니다.
+- 유기적으로 일하는 팀 가지고 있어야 하며 커뮤니티를 관리/유지해야 합니다.
+- Token Economy 설계에 대한 eosBLACK Advisory Board의 평가 기준을 충족해야 합니다.
+- 백서, 주기적인 개발 진행 보고서를 포함한 프로젝트관련 정보를 진실하고 시기 적절한 방법으로 제공해야 합니다.
+- Crypto Factory Proposal 등록에 대한 기타 명시적 요구사항<br>
+  총 토큰의 10% 이상 또는 유통 중인 토큰의 20% 이상을 제공해야 합니다.*
+
+<br>
+
+<b id="f13"><sup>13</sup></b> Partial-Lock Commit-Reveal Voting  https://github.com/ConsenSys/PLCRVoting [↩](#a13)<br>
